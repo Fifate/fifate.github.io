@@ -1,45 +1,238 @@
-extends includes/layout.pug
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>世界上只有一种自我救赎 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="今天我从松明老师的课程学到了一个重要的方法来改变自卑缺爱的状态，那就是记录下日常生活中的开心、快乐与成长。所以从今天开始，我会记录下每一天的开心、快乐与成长。 今天我学到的重要的一句话是“世界上只有一种自我救赎，那就是在看透自己的缺失之后，自己一天天一点点的去找回来”。 昨天我运用我学到的高情商沟通方法在微信上向小姨说了我的想法：“小嬢，我晓得你说那么多是为了我好，想要我变得好起来，阳光、自信起来">
+<meta property="og:type" content="article">
+<meta property="og:title" content="世界上只有一种自我救赎">
+<meta property="og:url" content="http://example.com/2024/10/08/%E5%B9%B8%E7%A6%8F%E5%AD%98%E6%8A%98/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="今天我从松明老师的课程学到了一个重要的方法来改变自卑缺爱的状态，那就是记录下日常生活中的开心、快乐与成长。所以从今天开始，我会记录下每一天的开心、快乐与成长。 今天我学到的重要的一句话是“世界上只有一种自我救赎，那就是在看透自己的缺失之后，自己一天天一点点的去找回来”。 昨天我运用我学到的高情商沟通方法在微信上向小姨说了我的想法：“小嬢，我晓得你说那么多是为了我好，想要我变得好起来，阳光、自信起来">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-10-08T12:16:49.000Z">
+<meta property="article:modified_time" content="2024-10-08T12:53:09.135Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="幸福存折">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
 
-block content
-  #post
-    if top_img === false || page.bilibili_bg
-      include includes/header/post-info.pug
-    if theme.post_head_ai_description
-      include includes/anzhiyu/ai-info.pug
-    - let url = page.copyright_url || page.permalink
-    article#article-container.post-content(itemscope itemtype=url_for(url))
-      header
-        if (theme.post_meta.post.categories && page.categories && page.categories.data.length > 0)
-          each item, index in page.categories.data
-            a(href=url_for(item.path) itemprop="url").post-meta-categories #[=item.name]
-        if (theme.post_meta.page.tags)
-          each item, index in page.tags.data
-            a(href=url_for(item.path) tabindex="-1" itemprop="url")=item.name
-        h1#CrawlerTitle(itemprop="name headline")= page.title || _p('no_title')
-        - let author = page.copyright_author || config.author
-        span(itemprop="author" itemscope itemtype="http://schema.org/Person")=author
-        if (theme.post_meta.post.date_type)
-          if (theme.post_meta.post.date_type === 'both')
-            time(itemprop="dateCreated datePublished" datetime=date_xml(page.date) title=_p('post.created') + ' ' + full_date(page.date))=date(page.date, config.date_format)
-            time(itemprop="dateCreated datePublished" datetime=date_xml(page.updated) title=_p('post.updated') + ' ' + full_date(page.updated))=date(page.updated, config.date_format)
-          else
-            - let data_type_update = theme.post_meta.post.date_type === 'updated'
-            - let date_type = data_type_update ? 'updated' : 'date'
-            time(itemprop="dateCreated datePublished" datetime=date_xml(page[date_type]) title=date_title + ' ' + full_date(page[date_type]))=date(page[date_type], config.date_format)
-      !=page.content
+  
+  
+<link rel="stylesheet" href="/css/style.css">
 
-    include includes/post/post-copyright.pug
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
 
-    //- ad
-    if theme.ad && theme.ad.post
-      .ads-wrap!=theme.ad.post
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
 
-    if theme.post_pagination
-      include includes/pagination.pug
-    if theme.related_post && theme.related_post.enable
-      != related_posts(page,site.posts)
-
-    if page.comments !== false && theme.comments && theme.comments.use
-      - var commentsJsLoad = true
-      !=partial('includes/third-party/comments/index', {}, {cache: true})
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
       
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">[object Object]</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-幸福存折" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/10/08/%E5%B9%B8%E7%A6%8F%E5%AD%98%E6%8A%98/" class="article-date">
+  <time class="dt-published" datetime="2024-10-08T12:16:49.000Z" itemprop="datePublished">2024-10-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      世界上只有一种自我救赎
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>今天我从松明老师的课程学到了一个重要的方法来改变自卑缺爱的状态，那就是记录下日常生活中的开心、快乐与成长。所以从今天开始，我会记录下每一天的开心、快乐与成长。</p>
+<p>今天我学到的重要的一句话是“世界上只有一种自我救赎，那就是在看透自己的缺失之后，自己一天天一点点的去找回来”。</p>
+<p>昨天我运用我学到的高情商沟通方法在微信上向小姨说了我的想法：“小嬢，我晓得你说那么多是为了我好，想要我变得好起来，阳光、自信起来，但是我是没办法一下子就改变的，请你给我时间，如果你能看到我已经改变的好的地方，而不是仅仅看到我这样那样的不是，我会很开心的，我觉得我这样也会更快的变得自信、阳光起来的。”，我终于勇敢的说出来了！虽然仅仅是在微信上说，但这是对我意义重大的第一步！我要勇敢表达自己的想法！</p>
+
+
+<p>我画了日向创的头像，画得越来越好了，哈哈哈(˵¯͒〰¯͒˵)</p>
+<p>我起床后把床铺整理好了，我还是很爱整洁的呀！今天的发型我也搞得很不错呀！</p>
+<p>今天我成功把博客搞好了，完美充实的一天啊！</p>
+<p>今天就这样啦！明天又是新的一天，加油！我一定能摆脱自卑，走向自信的！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/10/08/%E5%B9%B8%E7%A6%8F%E5%AD%98%E6%8A%98/" data-id="cm23az0p10003c8u44dwnga9o" data-title="世界上只有一种自我救赎" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B9%B8%E7%A6%8F%E5%AD%98%E6%8A%98/" rel="tag">幸福存折</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2022/10/16/welcome/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">欢迎来到Fifate的博客</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/welcome/" rel="tag">welcome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B9%B8%E7%A6%8F%E5%AD%98%E6%8A%98/" rel="tag">幸福存折</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/welcome/" style="font-size: 10px;">welcome</a> <a href="/tags/%E5%B9%B8%E7%A6%8F%E5%AD%98%E6%8A%98/" style="font-size: 10px;">幸福存折</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">October 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/10/08/%E5%B9%B8%E7%A6%8F%E5%AD%98%E6%8A%98/">世界上只有一种自我救赎</a>
+          </li>
+        
+          <li>
+            <a href="/2022/10/16/welcome/">欢迎来到Fifate的博客</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
